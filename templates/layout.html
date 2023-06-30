@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skeleton.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
+  </head>
+  <body>
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="inicio">Inicio</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="delito-inf.html" data-popover="#codeNavPopover">Delitos informáticos</a>
+            <div id="codeNavPopover" class="popover">
+            <li class="navbar-item">
+            <a class="navbar-link" href="delito-penal.html" data-popover="#codeNavPopover">Derecho penal</a>
+            <div id="codeNavPopover" class="popover">
+            <li class="navbar-item">
+            <a class="navbar-link" href="delito-lab.html">Derecho laboral</a>
+            <li class="navbar-item">
+              <a class="navbar-link" href="nosotros.html" data-popover="#codeNavPopover">Nosotros</a>
+            <div id="codeNavPopover" class="popover">
+            <li class="navbar-item">
+            <a class="navbar-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block banner %} {% endblock %}
+    {% block body %}{% endblock %}
+    <footer>
+        <div class="five columns"> </div>
+          <p class="pie">© 2023 Todos los derechos reservados. Alumnos de segundo año Itec</p>
+          <div class="six columns"> </div>
+          <i class="fab fa-facebook"></i> 
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+      </footer>
+</body>
+</html>
