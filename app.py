@@ -30,4 +30,3 @@ def delito_laboral():
 @app.route('/delitopenal')
 def delito_penal():
     return render_template('delito-penal.html')
-
