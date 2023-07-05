@@ -30,3 +30,6 @@ def delito_laboral():
 @app.route('/delitopenal')
 def delito_penal():
     return render_template('delito-penal.html')
+
+def page_not_found(error):
+    return render_template('404.html'), 404
