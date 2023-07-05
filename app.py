@@ -1,5 +1,5 @@
-import requests
-from flask import Flask, render_template, request
+
+from flask import Flask, render_template 
 
 app = Flask(__name__, static_folder='static')
 
@@ -31,5 +31,6 @@ def delito_laboral():
 def delito_penal():
     return render_template('delito-penal.html')
 
+@app.route(404)
 def page_not_found(error):
     return render_template('404.html'), 404
