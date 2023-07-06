@@ -1,10 +1,11 @@
-{% block title %} Delitopenal{% endblock %}
+{% extends 'layout.html' %}
+
+{% block title %} Delito penal  {% endblock %}
 {% block body %}
-<body>
   <div class="container">
     <div class="row">
         <div class="four columns">
-            <img src="images/penal.png" alt="Penal">
+            <img src="{{ url_for('static', filename='images/penal.png') }}" alt="Penal">
         </div>
         <div class="eight columns">
             <a><h1>Delito Penal en Argentina</h1></a>
@@ -19,7 +20,7 @@
                     <h5><strong>Abogada Especialista en Derecho Penal.</strong></h5>
                 </div>
                 <div class="four columns">
-                    <img src="images/abogada2.png" alt="Abogada Penalista">
+                    <img src="{{ url_for('static', filename='images/abogada2.png') }}"  alt="Abogada Penalista">
                 </div>
             </div>
         </div>
